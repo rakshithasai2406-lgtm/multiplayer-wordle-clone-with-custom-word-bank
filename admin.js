@@ -1,42 +1,72 @@
-let adminWords = ["APPLE", "MANGO", "GRAPE"];
-
-function adminLogin() {
-    let username = prompt("Enter username:");
-    let password = prompt("Enter password:");
-
-    if (username === "admin" && password === "admin123") {
-        alert("Login Successful!");
-        adminMenu();
-    } else {
-        alert("Invalid Username or Password");
-    }
-}
-
-function adminMenu() {
-    let choice = prompt(
-        "1. View Words\n2. Add Word\n3. Remove Word"
+function showAdminPanel() {
+    let option = prompt(
+        "===== ADMIN PANEL =====\n\n" +
+        "1. View Word List\n" +
+        "2. Add New Word\n" +
+        "3. Remove Word\n" +
+        "4. Exit\n\n" +
+        "Enter your choice:"
     );
 
-    if (choice === "1") {
-        alert(adminWords.join(", "));
-    }
+    switch(option) {
 
-    else if (choice === "2") {
-        let word = prompt("Enter a 5-letter word:");
+        case "1":
+            alert("Words:\n\n" + words.join("\n"));
+            showAdminPanel();
+            break;
 
-        if (word.length === 5) {
-            adminWords.push(word.toUpperCase());
-            alert("Word Added!");
-        } else {
-            alert("Word must be exactly 5 letters.");
-        }
-    }
+        case "2":
+            let newWord = prompt("Enter a new 5-letter word:");
 
-    else if (choice === "3") {
-        let word = prompt("Enter word to remove:");
-        adminWords = adminWords.filter(
-            w => w !== word.toUpperCase()
-        );
-        alert("Word Removed!");
+            if (newWord == null) {
+                showAdminPanel();
+                return;
+            }
+
+            newWord = newWord.toUpperCase();
+
+            if (newWord.length !== 5) {
+                alert("Word must be exactly 5 letters.");
+            }
+            else if (words.includes(newWord)) {
+                alert("Word already exists.");
+            }
+            else {
+                words.push(newWord);
+                alert("Word Added Successfully!");
+            }
+
+            showAdminPanel();
+            break;
+
+        case "3":
+            let removeWord = prompt("Enter word to remove:");
+
+            if (removeWord == null) {
+                showAdminPanel();
+                return;
+            }
+
+            removeWord = removeWord.toUpperCase();
+
+            let index = words.indexOf(removeWord);
+
+            if (index !== -1) {
+                words.splice(index, 1);
+                alert("Word Removed Successfully!");
+            } else {
+                alert("Word not found.");
+            }
+
+            showAdminPanel();
+            break;
+
+        case "4":
+            alert("Logged Out");
+            break;
+
+        default:
+            alert("Invalid Choice");
+            showAdminPanel();
     }
 }
