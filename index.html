@@ -1,81 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Multiplayer Wordle Clone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Bank</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1>🎯 Multiplayer Wordle Clone</h1>
+<h1>Word Bank</h1>
 
-    <p>Guess the 5-letter word in 6 attempts.</p>
+<input type="text" id="wordInput" maxlength="5" placeholder="Enter 5-letter word">
 
-    <div class="controls">
-        <input
-            id="guessInput"
-            type="text"
-            placeholder="Enter 5-letter word"
-            maxlength="5">
+<button onclick="addNewWord()">Add Word</button>
 
-        <button id="submitBtn">
-            Submit Guess
-        </button>
-    </div>
+<button onclick="showRandomWord()">Show Random Word</button>
 
-    <div class="board">
+<p id="message"></p>
 
-        <div class="row">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
+<h3 id="randomWord"></h3>
 
-        <div class="row">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-
-        <div class="row">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-
-        <div class="row">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-
-        <div class="row">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-
-        <div class="row">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-
-    </div>
-
-    <script src="script.js"></script>
+<script src="words.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
