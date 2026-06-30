@@ -1,67 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Multiplayer Wordle Clone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Bank</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>🎯 Multiplayer Wordle Clone</h1>
-<p>Guess the 5-letter word in 6 attempts.</p>
-    <div class="controls">
-    <input type="text" placeholder="Enter 5-letter word" maxlength="5">
-    <button>Submit Guess</button>
-</div>
-    <div class="board">
 
-<div class="row">
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-</div>
+<h1>Word Bank</h1>
 
-<div class="row">
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-</div>
+<input type="text" id="wordInput" maxlength="5" placeholder="Enter 5-letter word">
 
-<div class="row">
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-</div>
+<button onclick="addNewWord()">Add Word</button>
 
-<div class="row">
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-</div>
+<button onclick="showRandomWord()">Show Random Word</button>
 
-<div class="row">
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-</div>
+<p id="message"></p>
 
-<div class="row">
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-<div class="tile"></div>
-</div>
+<h3 id="randomWord"></h3>
 
-</div>
+<script src="words.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
