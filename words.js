@@ -6,19 +6,23 @@ let words = [
     "BEACH"
 ];
 
-function getRandomWord(){
-    const randomIndex=Math.floor(Math.random()*words.length);
+function getRandomWord() {
+    const randomIndex = Math.floor(Math.random() * words.length);
     return words[randomIndex];
 }
 
-function addWord(word){
+function addWord(word) {
 
-    word=word.toUpperCase();
+    word = word.trim().toUpperCase();
 
-    if(word.length===5){
-        words.push(word);
-        return true;
+    if (!/^[A-Z]{5}$/.test(word)) {
+        return false;
     }
 
-    return false;
+    if (words.includes(word)) {
+        return false;
+    }
+
+    words.push(word);
+    return true;
 }
