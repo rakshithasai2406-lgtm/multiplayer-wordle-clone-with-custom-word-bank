@@ -3,17 +3,81 @@
 <p>Guess the 5-letter word in 6 attempts.</p>
 
 <div class="controls">
-    <input id="guessInput" type="text" maxlength="5" placeholder="Enter 5-letter word">
 
-    <button id="submitBtn">Submit Guess</button>
+    <input
+        id="guessInput"
+        type="text"
+        maxlength="5"
+        placeholder="Enter 5-letter word">
 
-    <button onclick="addPlayer()">Add Player</button>
+    <button id="submitBtn">
+        Submit Guess
+    </button>
 
-    <button onclick="showLeaderboard()">Leaderboard</button>
+    <button onclick="showAdminPanel()">
+        Admin Panel
+    </button>
+
+    <button onclick="addPlayer()">
+        Add Player
+    </button>
+
+    <button onclick="showLeaderboard()">
+        Leaderboard
+    </button>
+
 </div>
 
 <div class="board">
-    <!-- 6 rows × 5 tiles -->
+
+    <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </div>
+
+    <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </div>
+
+    <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </div>
+
+    <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </div>
+
+    <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </div>
+
+    <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </div>
+
 </div>
 
 <script src="words.js"></script>
