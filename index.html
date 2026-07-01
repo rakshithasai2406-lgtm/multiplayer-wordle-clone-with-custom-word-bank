@@ -1,27 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Bank</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<h1>🎯 Multiplayer Wordle Clone</h1>
 
-<h1>Word Bank</h1>
+<p>Guess the 5-letter word in 6 attempts.</p>
 
-<input type="text" id="wordInput" maxlength="5" placeholder="Enter 5-letter word">
+<div class="controls">
+    <input id="guessInput" type="text" maxlength="5" placeholder="Enter 5-letter word">
 
-<button onclick="addNewWord()">Add Word</button>
+    <button id="submitBtn">Submit Guess</button>
 
-<button onclick="showRandomWord()">Show Random Word</button>
+    <button onclick="addPlayer()">Add Player</button>
 
-<p id="message"></p>
+    <button onclick="showLeaderboard()">Leaderboard</button>
+</div>
 
-<h3 id="randomWord"></h3>
+<div class="board">
+    <!-- 6 rows × 5 tiles -->
+</div>
 
 <script src="words.js"></script>
 <script src="script.js"></script>
-
-</body>
-</html>
+<script src="admin.js"></script>
+<script src="multiplayer.js"></script>
